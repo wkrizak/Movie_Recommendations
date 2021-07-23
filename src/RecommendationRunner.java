@@ -487,7 +487,6 @@ public class RecommendationRunner {
      * Method ignores movies where "No rating" has been selected (default)
      * */
     private static void recordUserRatings(ArrayList<JRadioButton> myButtons, ArrayList<JSlider> mySliders, ArrayList<String> movieIDs, String userID) {
-        EfficientRater user = new EfficientRater(userID);
         for (int i = 0; i < myButtons.size(); i++) {
             JSlider slider = mySliders.get(i);
             JRadioButton rbutton = myButtons.get(i);
@@ -501,7 +500,7 @@ public class RecommendationRunner {
     /*
      * Create a single radio button to indicate if user has/has not seen movie
      * */
-    private static JRadioButton generateRadioButton() throws IOException {
+    private static JRadioButton generateRadioButton() {
         JRadioButton rbutton = new JRadioButton();
         rbutton.setText("No rating");
         rbutton.setSelected(true);
@@ -513,7 +512,7 @@ public class RecommendationRunner {
     /*
      * Create a single JSlider for user to input rating
      * */
-    private static JSlider generateRatingSlider(JRadioButton button) throws IOException {
+    private static JSlider generateRatingSlider(JRadioButton button) {
 
         JSlider ratingSlider = new JSlider(JSlider.HORIZONTAL, 0, 10, 0);
         ratingSlider.setMajorTickSpacing(1);
