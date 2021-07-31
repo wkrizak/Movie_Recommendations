@@ -10,16 +10,9 @@ The user has three options:
 Movie recommendations are limited to 10 movies and are sorted based on recommendation. 
 Recommendations are determined by comparing the user's rating history to a dataset of movie critics and their ratings.
 Critics with similar tastes to the user are weighted higher than others to calculate a weighted average score for each movie.
-Movies with the highest average score are recommended to the user.
-## Installation
-Note: The following installation instructions assume that you have a java IDE installed.
-1. Download [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/download_csv.cgi)  
-    a. Unzip the folder and move to preferred location.
-2. Open the project and navigate to the project settings. Add the Apache Commons library as a dependency.  
-3. Navigate to the RecommendationRunner class and run the main function.  
-
-## Usage
-
+## Installation Comments
+* This project utilizes Apache Commons CSV. Download here: [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/download_csv.cgi)  
+* Run the project using the main function in the RecommendationRunner class.
 ## License
 MIT License
 
