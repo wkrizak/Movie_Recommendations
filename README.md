@@ -12,7 +12,6 @@ Recommendations are determined by comparing the user's rating history to a datas
 Critics with similar tastes to the user are weighted higher than others to calculate a weighted average score for each movie.
 ## Installation Comments
 * This project utilizes Apache Commons CSV. Download here: [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/download_csv.cgi)  
-* Run the project using the main function in the RecommendationRunner class.
 ## License
 MIT License
 
