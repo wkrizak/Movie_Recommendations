@@ -6,6 +6,8 @@
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
+
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -18,7 +20,9 @@ public class MovieDatabase {
 
             if (ourMovies == null) {
                 ourMovies = new HashMap<String, Movie>();
-                loadMovies("src\\Data\\" + moviefile);
+                String[] pathNames = {"src", "Data", moviefile};
+                String path = String.join(File.separator, pathNames);
+                loadMovies(path);
             }
 
     }

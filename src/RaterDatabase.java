@@ -3,6 +3,7 @@
  * New critics can be added to allow for storage of user reviews
  */
 
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -22,7 +23,9 @@ public class RaterDatabase {
     public static void initialize(String filename) throws IOException{
         if (ourRaters == null) {
             ourRaters= new HashMap<String,Rater>();
-            addRatings("src\\Data\\" + filename);
+            String[] pathNames = {"src", "Data", filename};
+            String path = String.join(File.separator, pathNames);
+            addRatings(path);
         }
     }
 
